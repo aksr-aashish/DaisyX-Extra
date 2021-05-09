@@ -133,4 +133,5 @@ def get_lst_of_files(input_directory, output_lst):
         output_lst.append(current_file_name)
     return output_lst
 
-CMD_HELP.update({"zip":".zip to compress or zip any file",\n".unzip":"to unzip any zipped file "}) 
+CMD_HELP.update({"zip":".zip to compress or zip any file",
+".unzip":"to unzip any zipped file "})
