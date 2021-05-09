@@ -17,7 +17,7 @@ from telethon.tl.types import InputMessagesFilterMusic
 
 from DaisyX import CMD_HELP, bot
 
-from ..utils import admin_cmd
+from DaisyX.utils import admin_cmd
 
 try:
     pass
