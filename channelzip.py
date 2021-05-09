@@ -16,7 +16,7 @@ import shutil
 import uuid
 
 from DaisyX import CMD_HELP
-from ..utils import admin_cmd
+from DaisyX.utils import admin_cmd
 
 
 @bot.on(admin_cmd(pattern="chnnlzip(?: |$)(.*)"))
