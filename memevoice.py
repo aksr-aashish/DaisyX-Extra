@@ -8,7 +8,7 @@ import re
 
 from DaisyX import bot
 
-from ..utils import admin_cmd
+from DaisyX.utils import admin_cmd
 
 IF_EMOJI = re.compile(
     "["
