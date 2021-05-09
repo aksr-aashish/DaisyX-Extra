@@ -94,6 +94,3 @@ async def episode(event):
     butons = []
  await event.edit(text, buttons=cbutton)
 
-CmdHelp("AnimeWatch").add_command(
-  'gogo', '<anime name>', 'Anime Download Now'
-).add()
