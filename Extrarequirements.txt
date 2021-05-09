@@ -2,4 +2,4 @@ Skem
 youtube-dl
 justwatch
 qrcode
-
+psutils
