@@ -10,7 +10,7 @@ import cv2
 import requests
 from telegraph import upload_file
 
-from ..utils import admin_cmd
+from DaisyX.utils import admin_cmd
 
 path = "./dcobra/"
 if not os.path.isdir(path):
