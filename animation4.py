@@ -4,7 +4,7 @@ import asyncio
 
 from DaisyX import CMD_HELP
 
-from ..utils import admin_cmd, edit_or_reply, sudo_cmd
+from DaisyX.utils import admin_cmd, edit_or_reply, sudo_cmd
 
 
 @bot.on(admin_cmd(pattern=f"loding$", outgoing=True))
