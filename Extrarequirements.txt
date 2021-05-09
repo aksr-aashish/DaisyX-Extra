@@ -3,4 +3,4 @@ youtube-dl
 justwatch
 qrcode
 psutil
-gogoanime-api
+
