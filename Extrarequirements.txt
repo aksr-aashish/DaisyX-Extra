@@ -1,4 +1,4 @@
-barcode
+python-barcode
 youtube-dl
 justwatch
 qrcode
