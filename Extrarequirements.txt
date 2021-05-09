@@ -2,3 +2,4 @@ Skem
 youtube-dl
 justwatch
 qrcode
+python-barcode
