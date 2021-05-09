@@ -16,7 +16,7 @@ from PIL import Image, ImageDraw
 from telegraph import upload_file
 
 from DaisyX import CMD_HELP
-from ..utils import admin_cmd
+from DaisyX.utils import admin_cmd
 
 path = "./dcobra/"
 if not os.path.isdir(path):
