@@ -12,7 +12,8 @@ from barcode.writer import ImageWriter
 from bs4 import BeautifulSoup
 from PIL import Image, ImageColor
 from telethon.errors.rpcerrorlist import YouBlockedUserError
-
+from DaisyX.utils import admin_cmd, sudo_cmd
+from DaisyX import CMD_HELP
 
 @bot.on(admin_cmd(pattern="(scan|scani)$"))
 @bot.on(sudo_cmd(pattern="(scan|scani)$", allow_sudo=True))
