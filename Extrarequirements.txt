@@ -1,3 +1,4 @@
 Skem
 youtube-dl
 justwatch
+qrcode
