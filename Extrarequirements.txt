@@ -3,4 +3,5 @@ youtube-dl
 justwatch
 qrcode
 psutil
-
+pydub
+numpy
