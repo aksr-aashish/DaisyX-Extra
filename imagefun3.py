@@ -15,7 +15,7 @@ from PIL import Image
 
 from DaisyX import CMD_HELP
 
-from ..utils import admin_cmd
+from DaisyX.utils import admin_cmd
 
 path = "./dcobra/"
 if not os.path.isdir(path):
