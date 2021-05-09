@@ -7,7 +7,7 @@ import numpy as np
 from pydub import AudioSegment
 from telethon import types
 
-from ..utils import admin_cmd
+from DaisyX.utils import admin_cmd
 
 
 @bot.on(admin_cmd(pattern="bassbost ?(.*)"))
