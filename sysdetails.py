@@ -68,26 +68,3 @@ def get_size(inputbytes, suffix="B"):
             return f"{inputbytes:.2f}{unit}{suffix}"
         inputbytes /= factor
 
-
-@bot.on(admin_cmd(pattern="cpu$"))
-@bot.on(sudo_cmd(pattern="cpu$", allow_sudo=True))
-async def _(event):
-    if event.fwd_from:
-        return
-    cmd = "cat /proc/cpuinfo | grep 'model name'"
-    o = (await _catutils.runcmd(cmd))[0]
-    await edit_or_reply(
-        event, f"**[Cat's](tg://need_update_for_some_feature/) CPU Model:**\n{o}"
-    )
-
-
-@bot.on(admin_cmd(pattern=f"sysd$", outgoing=True))
-@bot.on(sudo_cmd(pattern=f"sysd$", allow_sudo=True))
-async def sysdetails(sysd):
-    cmd = "git clone https://github.com/dylanaraps/neofetch.git"
-    await _catutils.runcmd(cmd)
-    neo = "neofetch/neofetch --off --color_blocks off --bold off --cpu_temp C \
-                    --cpu_speed on --cpu_cores physical --kernel_shorthand off --stdout"
-    a, b, c, d = await _catutils.runcmd(neo)
-    result = str(a) + str(b)
-    await edit_or_reply(sysd, "Neofetch Result: `" + result + "`")
