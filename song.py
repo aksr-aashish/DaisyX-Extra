@@ -3,7 +3,7 @@ import asyncio
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 
 from DaisyX import CMD_HELP, bot
-from ..utils import admin_cmd
+from DaisyX.utils import admin_cmd
 
 
 @bot.on(admin_cmd(pattern="netease ?(.*)"))
