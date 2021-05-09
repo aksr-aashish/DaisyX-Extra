@@ -24,7 +24,7 @@ from telegraph import upload_file
 from telethon.tl.functions.users import GetFullUserRequest
 
 from DaisyX import CMD_HELP, bot as friday
-from DaisyX.function import convert_to_image, crop_vid, runcmd
+from DaisyX.functions import convert_to_image, crop_vid, runcmd
 from DaisyX.utils import admin_cmd as friday_on_cmd, sudo_cmd
 
 sedpath = "./starkgangz/"
