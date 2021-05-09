@@ -4,7 +4,7 @@ from datetime import datetime
 
 import psutil
 from telethon import __version__
-
+from DaisyX.utils import admin_cmd, sudo_cmd
 from DaisyX import ALIVE_NAME
 
 # ================= CONSTANT =================
