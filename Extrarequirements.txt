@@ -1,4 +1,4 @@
-Skem
+barcode
 youtube-dl
 justwatch
 qrcode
