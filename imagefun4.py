@@ -11,7 +11,7 @@ import cv2
 from PIL import Image
 
 
-from ..utils import admin_cmd
+from DaisyX.utils import admin_cmd
 
 # Now Gifs nd Stickers also Support
 # OpenCV Basics
