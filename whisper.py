@@ -8,7 +8,7 @@ from DaisyX import bot
 
 # By Team DC 
 
-@borg.on(lightning_cmd(pattern="wspr ?(.*)"))
+@borg.on(admin_cmd(pattern="wspr ?(.*)"))
 async def wspr(event):
     if event.fwd_from:
         return
