@@ -1,7 +1,7 @@
 
 from telethon import events
 from telethon.tl.types import ChannelParticipantsAdmins, ChannelParticipantAdmin, ChannelParticipantCreator
-from userbot.utils import admin_cmd
+from DaisyX.utils import admin_cmd
 from telethon.errors.rpcerrorlist import (UserIdInvalidError,
                                           MessageTooLongError)
                                           
