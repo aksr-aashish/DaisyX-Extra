@@ -61,16 +61,16 @@ async def get_users(show):
             if not show.pattern_match.group(1):
                 async for user in show.client.iter_participants(show.chat_id):
                     if not user.deleted:
-                        mentions += f"\n{user.id},⚠️Suspicious/Btc Scammer/Fraudulent activities #Massban🛑"
+                        mentions += f"\n{user.id},⚠️Suspicious/Blaclisted Group/You Are Member of Blacklisted Group #Massban🛑"
                     else:
-                        mentions += f"\n{user.id},⚠️Suspicious/Btc Scammer/Fraudulent activities #Massban🛑"
+                        mentions += f"\n{user.id},⚠️Suspicious/Blaclisted Group/You Are Member of Blacklisted Group #Massban🛑"
             else:
                 searchq = show.pattern_match.group(1)
                 async for user in show.client.iter_participants(show.chat_id, search=f'{searchq}'):
                     if not user.deleted:
-                        mentions += f"\n{user.id},⚠️Suspicious/Btc Scammer/Fraudulent activities #Massban🛑"
+                        mentions += f"\n{user.id},⚠️Suspicious/Blaclisted Group/You Are Member of Blacklisted Group #Massban #Massban🛑"
                     else:
-                        mentions += f"\n{user.id},⚠️Suspicious/Btc Scammer/Fraudulent activities #Massban🛑"
+                        mentions += f"\n{user.id},⚠️Suspicious/Blaclisted Group/You Are Member of Blacklisted Group #Massban🛑"
         except ChatAdminRequiredError as err:
             mentions += " " + str(err) + "\n"
         try:
