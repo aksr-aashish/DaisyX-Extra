@@ -32,8 +32,8 @@ from urllib.error import HTTPError
 
 from pySmartDL import SmartDL
 
-from ULTRA.utils import admin_cmd, edit_or_reply, humanbytes, time_formatter
-from ULTRA import CMD_HELP, LOGS
+from DaisyX.utils import admin_cmd, edit_or_reply, humanbytes, time_formatter
+from DaisyX import CMD_HELP, LOGS
 
 TEMP_DOWNLOAD_DIRECTORY = Config.TMP_DOWNLOAD_DIRECTORY
 
