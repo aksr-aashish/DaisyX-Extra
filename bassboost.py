@@ -74,7 +74,6 @@ async def __(message):
             voice_note=True,
             caption="Bass Boosted, \nDone By VirtualUserbot",
         )
-        os.remove(m)
     else:
         m.name = "BassBoosted.mp3"
         await message.edit("`Now Exporting...`")
@@ -88,12 +87,13 @@ async def __(message):
             attributes=[
                 types.DocumentAttributeAudio(
                     duration=reply.document.attributes[0].duration,
-                    title=f"BassBoost {str(accentuate_db)}lvl",
+                    title=f'BassBoost {accentuate_db}lvl',
                     performer="BassBoost",
                 )
             ],
             caption="Bass Boosted, \nDone By VirtualUserbot",
         )
-        os.remove(m)
+
+    os.remove(m)
     await message.delete()
     os.remove(fname)

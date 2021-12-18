@@ -51,8 +51,9 @@ async def nope(kraken):
     await troll[0].click(
         kraken.chat_id,
         reply_to=kraken.reply_to_msg_id,
-        silent=True if kraken.is_reply else False,
+        silent=bool(kraken.is_reply),
         hide_via=True,
     )
+
 
     await kraken.delete()

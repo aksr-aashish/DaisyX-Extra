@@ -104,7 +104,7 @@ async def mega_downloader(megadl):
     try:
         downloader.start(blocking=False)
     except HTTPError as e:
-        await catevent.edit(f"**HTTPError**: `{str(e)}`")
+        await catevent.edit(f'**HTTPError**: `{e}`')
         return None
     start = time.time()
     while not downloader.isFinished():
@@ -155,7 +155,7 @@ async def mega_downloader(megadl):
             P.start()
             P.join()
         except FileNotFoundError as e:
-            await catevent.edit(f"`{str(e)}`")
+            await catevent.edit(f'`{e}`')
             return None
         else:
             await catevent.edit(

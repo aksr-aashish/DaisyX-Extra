@@ -8,9 +8,8 @@ async def inline_proboy(event):
   CHUTX = event.text[5:]
   CHUTX, PARRYX = CHUTX.split('@')
   os.system("rm -rf wspr.txt")
-  f = open("wspr.txt", "a")
-  f.write(CHUTX + "\n" + PARRYX)
-  f.close()
+  with open("wspr.txt", "a") as f:
+    f.write(CHUTX + "\n" + PARRYX)
   LUNDX = event.builder
   LUNDBOI = [[Button.inline("🔐 Sʜᴏᴡ", data='secret')]]
   LUNDBOI += [[Button.switch_inline("Rᴇᴘʟʏ", query="wspr", same_peer=True)]]
@@ -20,12 +19,10 @@ async def inline_proboy(event):
 @xbot.on(events.callbackquery.CallbackQuery(data=re.compile(b'secret')))
 async def wspr(event):
   try:
-    f = open("wspr.txt")
-    LUNDX = f.readlines()[0]
-    f.close()
-    pro = open("wspr.txt")
-    CHUTX = pro.readlines()[1].lower()
-    pro.close()
+    with open("wspr.txt") as f:
+      LUNDX = f.readlines()[0]
+    with open("wspr.txt") as pro:
+      CHUTX = pro.readlines()[1].lower()
     bot = await xbot.get_me()
     sender = f"{event.sender.username}".lower()
     me = f"{borg.me.username}".lower()

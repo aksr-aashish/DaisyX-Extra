@@ -203,7 +203,7 @@ async def hehe(event):
     await event.edit("`Processing...`")
     image = await bot.download_media(reply.media, path)
     ims = image
-    os.system(f"wget https://telegra.ph/file/9974f1b3947f5f97f4075.png")
+    os.system('wget https://telegra.ph/file/9974f1b3947f5f97f4075.png')
     lbcn = "9974f1b3947f5f97f4075.png"
     img1 = cv2.VideoCapture(ims)
     ret, frame = img1.read()

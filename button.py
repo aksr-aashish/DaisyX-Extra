@@ -11,25 +11,22 @@ async def Buttons(event):
     DAISYX = Var.TG_BOT_USER_NAME_BF_HER
     pro = event.text[7:]
     pro, boy = pro.split("|")
-    f = open("Button.txt", "w") 
-    f.write(f'{pro}\n{boy}')
-    f.close()
+    with open("Button.txt", "w") as f:
+        f.write(f'{pro}\n{boy}')
     LUNDX = await bot.inline_query(DAISYX, "BUTTON")
     await LUNDX[0].click(event.chat_id)
     await event.delete()
 
 @xbot.on(events.InlineQuery(pattern='BUTTON'))
 async def file(event):
-  f = open("Button.txt")
-  ok = f.readlines()[0]
-  f.close()
-  CHUTX = open("Button.txt")
-  bc = CHUTX.readlines()[1]
-  CHUTX.close()
-  LUNDX = event.builder
-  DEVIL = [[Button.url(f'{ok}', f'{bc}')]]
-  INUKA = LUNDX.article(title='Button by DaisyX', text=f'{ok}', buttons=DEVIL)
-  await event.answer([INUKA])
+    with open("Button.txt") as f:
+        ok = f.readlines()[0]
+    with open("Button.txt") as CHUTX:
+        bc = CHUTX.readlines()[1]
+    LUNDX = event.builder
+    DEVIL = [[Button.url(f'{ok}', f'{bc}')]]
+    INUKA = LUNDX.article(title='Button by DaisyX', text=f'{ok}', buttons=DEVIL)
+    await event.answer([INUKA])
 
 CMD_HELP.update(
     {
